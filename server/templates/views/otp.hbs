@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>OTP</title>
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/otp.css">
+    </head>
+    <body>
+        {{>spinner}}
+        <div class="container">
+            <div class="row bg-white form-container">
+                <div class="col-12 align-self-center">
+                    <div class="text-center">
+                        <h1 id="service-heading">Add contact for {{displayService}}</h1>
+                    </div>
+                    <div class="text-container">
+                        <p>An email was sent to <span class="text-secondary">{{email}}</span>. Wrong email address? Click <a href="/{{service}}">here</a> to go back.</p>
+                    </div>
+                    <div class="text-container"></div>
+                    <form id="otp-form">
+                        <div class="form-group row justify-content-center">
+                            <div class="col-md-4">
+                                <input type="number" class="form-control" id="otp" name="otp" placeholder="One Time Password" required tabindex="-1" autofocus>
+                                <div class="valid-feedback d-block text-center"></div>
+                                <div class="invalid-feedback d-block" id="otp-feedback"></div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-12 text-center">
+                                <button type="button" class="btn btn-outline-secondary rounded-pill" id="resend-button" disabled>Resend in 25s</button>
+                                <button type="submit" class="btn btn-outline-success rounded-pill">Verify OTP</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/popper.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/otp.js"></script>
+    </body>
+</html>

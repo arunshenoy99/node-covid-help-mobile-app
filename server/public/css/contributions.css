@@ -1,0 +1,38 @@
+@font-face {
+    font-family: itimRegular;
+    src: url('../fonts//Itim-Regular.ttf');
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%
+}
+
+body {
+    height: 100%;
+    font-family: itimRegular;
+}
+
+.spinner-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    z-index: 999999;
+}
+
+.spinner-border {
+    position: absolute;
+    top: 48%;
+    left: 48%;
+}
+
+.container {
+    height: 100%;
+}
+
+.row {
+    margin-top: 25px;
+}
